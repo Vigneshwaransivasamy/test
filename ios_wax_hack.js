@@ -1,14 +1,10 @@
 setTimeout(function(){
     try{
-        var _global = WAXJS || SymMobWax || "Not Available";
-        } catch(e){
-            try{
-                var _global = SymMobWax || "Not Available";
-            } catch(e){
-                console.log(e);
-            }
-        }
-    alert(_global);
+        var _global = WaxMobileAdapter || "Not Available";
+    } catch(e){
+        console.log(e);   
+    }
+    // alert(_global);
     if(_global){
         alert("WaxJS available")
         _global.webPageData.pageUrl = "https://www.google.com/";
