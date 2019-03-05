@@ -10,11 +10,15 @@ setTimeout(function(){
         }
     alert(_global);
     if(_global){
-        _global.webPageData.pageUrl = "https://www.google.com/";
-        let data = WaxInterface.getSavedLogins(_global.webPageData);
-        let stringifiedData = JSON.stringify(data);
-        document.getElementById("data").innerText = stringifiedData;
         alert("WaxJS available")
+        _global.webPageData.pageUrl = "https://www.google.com/";
+        WaxInterface.getSavedLogins(_global.webPageData);
+        WaxInterface.fillUserSelectedLogin = function(data){
+            let stringifiedData = JSON.stringify(data);
+            document.getElementById("data").innerText = stringifiedData;
+            alert(stringifiedData);
+        };
+        
     }
 
     alert("WaxJS not available");
