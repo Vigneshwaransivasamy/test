@@ -1,5 +1,6 @@
 setTimeout(function(){
     let _global = window.WAXJS || window.SymMobWax;
+    alert(_global);
     if(_global){
         _global.webPageData.pageUrl = "https://www.google.com/";
         let data = WaxInterface.getSavedLogins(_global.webPageData);
