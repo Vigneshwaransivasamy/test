@@ -1,5 +1,5 @@
 setTimeout(function(){
-    let _global = window.WAXJS || window.SymMobWax;
+    let _global = WAXJS || SymMobWax || "Not Available";
     alert(_global);
     if(_global){
         _global.webPageData.pageUrl = "https://www.google.com/";
