@@ -15,8 +15,9 @@ setTimeout(function(){
             alert(stringifiedData);
         };
         
+    } else {
+        alert("WaxJS not available");
     }
-
-    alert("WaxJS not available");
+    
 
 }, 200);
